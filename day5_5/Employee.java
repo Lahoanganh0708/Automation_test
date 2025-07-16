@@ -7,17 +7,41 @@ public class Employee {
     protected String maNV;
     protected String sdt;
 
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
+    public String getMaNV() {
+        return maNV;
+    }
+
+    public void setMaNV(String maNV) {
+        this.maNV = maNV;
+    }
+
+    public String getSdt() {
+        return sdt;
+    }
+
+    public void setSdt(String sdt) {
+        this.sdt = sdt;
+    }
+
     public void nhapThongTin(Scanner sc) {
-        sc.nextLine(); // clear buffer
+        sc.nextLine();
         System.out.print("Nhập họ tên: ");
-        hoTen = sc.nextLine();
+        setHoTen(sc.nextLine());
         System.out.print("Nhập mã nhân viên: ");
-        maNV = sc.nextLine();
+        setMaNV(sc.nextLine());
         System.out.print("Nhập số điện thoại: ");
-        sdt = sc.nextLine();
+        setSdt(sc.nextLine());
     }
 
     public void inThongTin() {
-        System.out.println("Họ tên: " + hoTen + " | Mã NV: " + maNV + " | SĐT: " + sdt);
+        System.out.println("Họ tên: " + getHoTen() + " | Mã NV: " + getMaNV() + " | SĐT: " + getSdt());
     }
 }
